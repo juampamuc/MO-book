@@ -14,49 +14,58 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-DVQ7NZ8CYZ"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-DVQ7NZ8CYZ');
             </script>
@@ -66,6 +75,12 @@
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-DVQ7NZ8CYZ');
             </script>
@@ -73,44 +88,36 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/appendix/functional-programming-pyomo';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Index" href="../../genindex.html" />
-    <link rel="prev" title="Pyomo style guide" href="pyomo-style-guide.html" />
+    <link rel="prev" title="Pyomo style guide" href="pyomo-style-guide-update.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -118,7 +125,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -126,10 +132,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -138,7 +193,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -153,6 +209,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -165,22 +223,18 @@
       
     
     
-    <img src="../../_static/logo-02.png" class="logo__image only-light" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
-    <script>document.write(`<img src="../../_static/logo-02.png" class="logo__image only-dark" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>`);</script>
+    <img src="../../_static/cover.jpg" class="logo__image only-light" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
+    <img src="../../_static/cover.jpg" class="logo__image only-dark pst-js-only" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -192,13 +246,13 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../01/01.00.html">1. Mathematical Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/01.00.html">1. Mathematical Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/01-production-planning.html">1.1 A first production planning problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../01/02-production-planning-basic.html">1.2 A basic Pyomo model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../01/03-production-planning-advanced.html">1.3 A data-driven Pyomo Model</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02/02.00.html">2. Linear Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02/02.00.html">2. Linear Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../02/01-bim.html">2.1 BIM production planning using linear optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/02-lad-regression.html">2.2 Least Absolute Deviation (LAD) Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/03-mad-portfolio-optimization.html">2.3 Mean Absolute Deviation (MAD) portfolio optimization</a></li>
@@ -207,10 +261,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../02/06-bim-dual.html">2.6 Dual of the BIM production problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/07-bim-demand-forecast.html">2.7 BIM production using demand forecasts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/08-L1-regression-wine-quality.html">Extra material: Wine quality prediction with <span class="math notranslate nohighlight">\(L_1\)</span> regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02/09-production-faciliity-worst-case.html">Extra material: Multi-product facility production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/09-production-facility-worst-case.html">Extra material: Multi-product facility production</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03/03.00.html">3. Mixed Integer Linear Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03/03.00.html">3. Mixed Integer Linear Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../03/01-bim-perturbed.html">3.1 BIM production with perturbed data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/02-shift-scheduling.html">3.2 Workforce shift scheduling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/03-recharging-electric-vehicle.html">3.3 Recharging strategy for an electric vehicle</a></li>
@@ -225,8 +279,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../03/10-job-shop-scheduling.html">Extra material: Job shop scheduling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/11-maintenance-planning.html">Extra material: Maintenance planning</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../04/04.00.html">4. Network Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04/04.00.html">4. Network Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../04/01-dinner-seat-allocation.html">4.1 Dinner seating arrangement</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../04/02-mincost-flow.html">4.2 Minimum-Cost Flow Problem</a></li>
@@ -243,17 +297,17 @@
 
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../05/05.00.html">5. Convex Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05/05.00.html">5. Convex Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../05/01-milk-pooling.html">5.1 Milk pooling and blending</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/02-ols-regression.html">5.2 Ordinary Least Squares (OLS) Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/03-markowitz-portfolio.html">5.3 Markowitz portfolio optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/04-svm-binary-classification.html">5.4 Support Vector Machines for binary classification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/05-refinery-production.html">Extra material: Refinery production and shadow pricing with CVXPY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05/06-cutting-stock.html">Extra Material: Cutting Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05/06-cutting-stock.html">Extra material: Cutting stock</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06/06.00.html">6. Conic Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06/06.00.html">6. Conic Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../06/01-economic-order-quantity.html">6.1 Economic Order Quantity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/02-kelly-criterion.html">6.2 The Kelly criterion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/03-markowitz-portfolio-revisited.html">6.3 Markowitz portfolio optimization revisited</a></li>
@@ -262,25 +316,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../06/06-investment-wheel.html">Extra material: Luenberger’s Investment Wheel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/07-optimal-growth-portfolios.html">Extra material: Optimal Growth Portfolios with Risk Aversion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../07/07.00.html">7. Accounting for Uncertainty: Optimization Meets Reality</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07/07.00.html">7. Accounting for Uncertainty: Optimization Meets Reality</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../07/01-fleet-assignment.html">7.1 Fleet assignment problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07/02-bim-robustness-analysis.html">7.2 Robustness analysis of BIM production plan via simulations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../08/08.00.html">8. Robust Optimization - Single Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08/08.00.html">8. Robust Optimization - Single Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../08/01-bim-robust-optimization.html">8.1 Robust BIM microchip production problem</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../09/09.00.html">9. Stochastic Optimization - Single Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09/09.00.html">9. Stochastic Optimization - Single Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../09/01-markowitz-portfolio-with-chance-constraint.html">9.1 Markowitz portfolio optimization with chance constraints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/02-pop-up-shop.html">9.2 Pop-up shop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/03-seafood-distribution-center.html">9.3 Stock optimization for seafood distribution center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/04-economic-dispatch.html">9.4 Economic dispatch in renewable energy systems using chance constraints</a></li>
-
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10/10.00.html">10. Two-Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10/10.00.html">10. Two-Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../10/01-aircraft-seat-allocation.html">10.1 Aircraft seat allocation problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../10/02-two-stage-production-planning.html">10.2 Two-stage production planning using constraint and column generation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../10/03-opf-linear-decision-rule.html">10.3 Optimal power flow problem with recourse actions</a></li>
@@ -288,13 +341,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../10/05-opf-wind-curtailment.html">Extra: Two-stage energy dispatch optimization with wind curtailment</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="appendix.html">Appendix: Working with Pyomo</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pyomo-style-guide.html">Pyomo style guide</a></li>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="appendix.html">Appendix: Working with Pyomo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pyomo-style-guide-update.html">Pyomo style guide</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Functional Programming with Pyomo</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+</details></li>
 </ul>
 
     </div>
@@ -303,14 +355,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -319,14 +376,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -351,14 +408,14 @@
       
       <li><a href="https://colab.research.google.com/github/mobook/MO-book/blob/main/notebooks/appendix/functional-programming-pyomo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -466,7 +523,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -480,27 +537,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -520,7 +569,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomo-and-optimization-workflows">Pyomo and Optimization Workflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-programming-and-monads">Functional Programming and Monads</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-functions">Pure functions</a></li>
@@ -533,7 +582,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pyomo-monad">A Pyomo monad</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pyomo-and-solvers">Import Pyomo and solvers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-pyomo-solvers-and-transformations-as-pure-functions">Wrapping Pyomo solvers and transformations as “pure” functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-pyomo-solvers-and-transformations-as-functions">Wrapping Pyomo solvers and transformations as functions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomomonad"><strong>PyomoMonad</strong></a></li>
 </ul>
 </li>
@@ -543,7 +592,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-model">Mathematical model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomo-model-builder">Pyomo model builder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-a-workflow">Executing a workflow</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alterntive-syntax">Alterntive syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-syntax">Alternative syntax</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">Composition</a></li>
 </ul>
 </li>
@@ -595,7 +644,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pure functions</span>
 <span class="n">trim</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <span class="n">upper</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">exclaim</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+<span class="n">exclaim</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">"!"</span>
 </pre></div>
 </div>
 </div>
@@ -603,12 +652,12 @@ document.write(`
 <p>These can be nested in various combinations and applied to a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exclaim</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">trim</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exclaim</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">trim</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -646,12 +695,12 @@ g \circ f: A &amp; \rightarrow C \\
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">enthuse</span> <span class="o">=</span> <span class="n">compose</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">upper</span><span class="p">),</span> <span class="n">exclaim</span><span class="p">)</span>
-<span class="n">enthuse</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)</span>
+<span class="n">enthuse</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -670,8 +719,8 @@ h : C &amp; \rightarrow D \\
 \[h\circ g\circ f = (h\circ g)\circ f = h\circ (g\circ f)\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">upper</span><span class="p">),</span> <span class="n">exclaim</span><span class="p">)(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">compose</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span> <span class="n">exclaim</span><span class="p">))(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">upper</span><span class="p">),</span> <span class="n">exclaim</span><span class="p">)(</span><span class="s2">" get off my lawn"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compose</span><span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">compose</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span> <span class="n">exclaim</span><span class="p">))(</span><span class="s2">" get off my lawn"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -688,12 +737,12 @@ GET OFF MY LAWN!
 <p>The functions <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, and <code class="docutils literal notranslate"><span class="pre">functools.reduce</span></code> extend the utility of pure functions. Note that <code class="docutils literal notranslate"><span class="pre">map</span></code> actually returns an iterator, so <code class="docutils literal notranslate"><span class="pre">list</span></code> is required to apply the function to every element of the data given in <code class="docutils literal notranslate"><span class="pre">map</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">enthuse</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;go away&quot;</span><span class="p">,</span> <span class="s2">&quot; get off my lawn&quot;</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">enthuse</span><span class="p">,</span> <span class="p">[</span><span class="s2">"hello"</span><span class="p">,</span> <span class="s2">"go away"</span><span class="p">,</span> <span class="s2">" get off my lawn"</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;HELLO!&#39;, &#39;GO AWAY!&#39;, &#39;GET OFF MY LAWN!&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['HELLO!', 'GO AWAY!', 'GET OFF MY LAWN!']
 </pre></div>
 </div>
 </div>
@@ -701,15 +750,15 @@ GET OFF MY LAWN!
 <p><code class="docutils literal notranslate"><span class="pre">reduce</span></code> applies a function of two values recursively to a tuple, list, or iterator to reduce it to a single cumulative value. This provides a convenient means to construct of composition of two or more functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
 
 <span class="n">enthuse</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">compose</span><span class="p">,</span> <span class="p">(</span><span class="n">trim</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">exclaim</span><span class="p">))</span>
-<span class="n">enthuse</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)</span>
+<span class="n">enthuse</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -729,7 +778,7 @@ GET OFF MY LAWN!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;int&#39; object has no attribute &#39;strip&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'int' object has no attribute 'strip'
 </pre></div>
 </div>
 </div>
@@ -743,15 +792,15 @@ GET OFF MY LAWN!
 </section>
 <section id="the-maybe-monad">
 <h3>The <strong>Maybe</strong> monad<a class="headerlink" href="#the-maybe-monad" title="Link to this heading">#</a></h3>
-<p>The following cell shows a Python implementation for a <strong>Maybe</strong> monad. The <strong>Maybe</strong> monad wraps a value the may contain a value. If the result of bind produces an error, the value stored is <code class="docutils literal notranslate"><span class="pre">None</span></code> and a flag is set.</p>
+<p>The following cell implements a simple <strong>Maybe</strong> container for a value that may or may not be present. A successful <code class="docutils literal notranslate"><span class="pre">bind</span></code> wraps the function’s result. If the function raises an exception, <code class="docutils literal notranslate"><span class="pre">bind</span></code> returns a container with <code class="docutils literal notranslate"><span class="pre">value=None</span></code> and <code class="docutils literal notranslate"><span class="pre">contains_value=False</span></code>; later binds pass that failure along without calling their functions. The flag distinguishes a missing value from a successful function that happens to return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Maybe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">contains_value</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Maybe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">contains_value</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contains_value</span> <span class="o">=</span> <span class="n">contains_value</span>
 
-    <span class="k">def</span> <span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains_value</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Maybe</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 
@@ -759,10 +808,10 @@ GET OFF MY LAWN!
             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">Maybe</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
-        <span class="k">except</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Maybe</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 </div>
@@ -771,12 +820,12 @@ GET OFF MY LAWN!
 <p>To see how this works, let’s create an instance of <strong>Maybe</strong> and bind the composite function <code class="docutils literal notranslate"><span class="pre">enthuse</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">enthuse</span><span class="p">)()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">enthuse</span><span class="p">)()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -784,12 +833,12 @@ GET OFF MY LAWN!
 <p>The important thing to notice is that the pure functions previously defined can be applied and composed with no changes. All of the boilerplate code need to check for errors has been encapsulated in the <strong>Maybe</strong> monad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">trim</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">exclaim</span><span class="p">)()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">trim</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">exclaim</span><span class="p">)()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -809,13 +858,13 @@ GET OFF MY LAWN!
 <p>The <strong>Failure</strong> monad is designed to handle exceptions. Without modifying any of the previously defined functions, <strong>Failure</strong> captures the first exception and pushes it to the end of a chain of calculations. All of the boilerplate is in the monad, not the functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Failure</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Failure</span><span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
 
-    <span class="k">def</span> <span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Failure</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
 
@@ -826,7 +875,7 @@ GET OFF MY LAWN!
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Failure</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 </div>
@@ -834,12 +883,12 @@ GET OFF MY LAWN!
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Failure</span><span class="p">(</span><span class="s2">&quot; get off my lawn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">enthuse</span><span class="p">)()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Failure</span><span class="p">(</span><span class="s2">" get off my lawn"</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">enthuse</span><span class="p">)()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GET OFF MY LAWN!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'GET OFF MY LAWN!'
 </pre></div>
 </div>
 </div>
@@ -851,7 +900,7 @@ GET OFF MY LAWN!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AttributeError(&quot;&#39;int&#39; object has no attribute &#39;strip&#39;&quot;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AttributeError("'int' object has no attribute 'strip'")
 </pre></div>
 </div>
 </div>
@@ -860,45 +909,50 @@ GET OFF MY LAWN!
 </section>
 <section id="a-pyomo-monad">
 <h2>A Pyomo monad<a class="headerlink" href="#a-pyomo-monad" title="Link to this heading">#</a></h2>
-<p>In brief, a monad is a structure that wraps a value inside an object so that it can be passed through a series of functions.</p>
-<p>The functions are assumed to be stateless and without side effect. In other words, given the same input the functions will always the same output. The purpose of the monad is handle situations where a function results in</p>
-<p>for restricting access to a value. The reasons for restricting access are specific to the application. For Pyomo models, for example,</p>
+<p>We can use the same idea to organize a Pyomo workflow. A container holds a model, a status and an optional reporting function. Each <code class="docutils literal notranslate"><span class="pre">bind</span></code> applies one step to the current model and wraps the result. If a step raises an exception, the container records it and skips subsequent steps, so an unsuccessful solve does not flow into a report that expects solution values.</p>
+<p>The implementation has three parts:</p>
 <ul class="simple">
-<li><p>spe that are specific to the scenario. In Pyomo, for example, we ca</p></li>
+<li><p>Solver and transformation wrappers clone the input model before changing it. This leaves the caller’s model intact and makes it easier to reuse the same starting point in several workflows.</p></li>
+<li><p><strong>PyomoMonad</strong> connects these steps and carries the first exception in its <code class="docutils literal notranslate"><span class="pre">status</span></code>. A failed workflow displays that exception when called.</p></li>
+<li><p>Model builders return a <strong>PyomoMonad</strong> with an optional <em>effect</em>: a function that produces a report or plot from the resulting model. Binding performs the model operations; calling the container executes the effect, or returns the model when no effect is supplied.</p></li>
 </ul>
-<p>This first implementation of a Pyomo monad comprises three elements:</p>
-<ul class="simple">
-<li><p>Wrapping Pyomo solvers and transformers as functions. The solvers and transfers clone the model to avoid changes in the state of the model that is passed by reference.</p></li>
-<li><p>A <strong>PyomoMonad</strong> with a unit and bind functions. The monad will “lift” the Pyomo model by adding attributes for status and an effect. The effect is what will executed when the monad is executed.</p></li>
-<li><p>Pyomo models are created by model builders that take problem data and produce a Pyomo model encapsulated in a <strong>PyomoMonad</strong>. The monad can include an optional effect. The effect should produce any desired side effects, such as plots or reports written to files, and return any desired output from the model. The effect is called by call the monad.</p></li>
-</ul>
+<p>Cloning controls mutation of the input model, but does not make a solver mathematically pure: results can depend on solver settings and numerical tolerances, and an external solver may write logs or files. Error capture here covers the bound model-processing steps; an exception raised by the final reporting effect propagates normally.</p>
 <section id="import-pyomo-and-solvers">
 <h3>Import Pyomo and solvers<a class="headerlink" href="#import-pyomo-and-solvers" title="Link to this heading">#</a></h3>
+<p>The examples use the open-source solvers CBC and Ipopt. On Colab we install them through IDAES and add the downloaded binaries to the current session’s search path. For a local run, install Pyomo and make both solver executables available first. The wrapper below checks the selected solver when a workflow uses it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for use on Google Colab</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">if</span> <span class="s2">&quot;google.colab&quot;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>idaes-pse
-    <span class="o">!</span>idaes<span class="w"> </span>get-extensions
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="s2">"google.colab"</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+    <span class="o">%</span><span class="k">pip</span> install -q pyomo idaes-pse
+    <span class="o">!</span>idaes<span class="w"> </span>get-extensions<span class="w"> </span>--to<span class="w"> </span>./bin
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"PATH"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">"bin"</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyomo.environ</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyo</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="wrapping-pyomo-solvers-and-transformations-as-pure-functions">
-<h3>Wrapping Pyomo solvers and transformations as “pure” functions<a class="headerlink" href="#wrapping-pyomo-solvers-and-transformations-as-pure-functions" title="Link to this heading">#</a></h3>
-<p>Create some “pure” functions for processing Pyomo models. These are</p>
+<section id="wrapping-pyomo-solvers-and-transformations-as-functions">
+<h3>Wrapping Pyomo solvers and transformations as functions<a class="headerlink" href="#wrapping-pyomo-solvers-and-transformations-as-functions" title="Link to this heading">#</a></h3>
+<p>Each wrapper returns a function that accepts a model, clones it, applies the requested operation and returns the clone. With no operation specified, it returns an unchanged clone. The solver wrapper also checks termination before returning a solution; otherwise, the monad captures the failure instead of passing an unsuccessful result to the next step.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># given a string specification, returns a solver created by pyomo.SolverFactory</span>
-<span class="k">def</span> <span class="nf">solver</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">solver</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_solver</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">model</span> <span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">def</span> <span class="nf">_solver</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_solver</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
             <span class="n">new_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
-            <span class="n">pyo</span><span class="o">.</span><span class="n">SolverFactory</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
+            <span class="n">selected_solver</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">SolverFactory</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">selected_solver</span><span class="o">.</span><span class="n">available</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Solver </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> is not available."</span><span class="p">)</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">selected_solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
+            <span class="n">pyo</span><span class="o">.</span><span class="n">assert_optimal_termination</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">new_model</span>
     <span class="k">return</span> <span class="n">_solver</span>
 </pre></div>
@@ -908,11 +962,11 @@ GET OFF MY LAWN!
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># given a string specification, returns a transformer created by pyomo.TransformationFactory</span>
-<span class="k">def</span> <span class="nf">transformer</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">transformer</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_transformer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">model</span> <span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">def</span> <span class="nf">_transformer</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_transformer</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
             <span class="n">new_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
             <span class="n">pyo</span><span class="o">.</span><span class="n">TransformationFactory</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">new_model</span>
@@ -924,19 +978,19 @@ GET OFF MY LAWN!
 </section>
 <section id="pyomomonad">
 <h3><strong>PyomoMonad</strong><a class="headerlink" href="#pyomomonad" title="Link to this heading">#</a></h3>
-<p>The an implementation of a simple Pyomo monad. The monad can bind a functions that operates on a model object. A bound function must return a model object. Errors are captured and added to the status. An effect can be specified that will be the returned by the monad when called as a function. The “&gt;&gt;” operator is overridden to provide a little syntax sugar for representing workflows.</p>
+<p>This class binds functions that accept and return a model. It preserves the reporting effect after a successful step and records the exception after a failed step. Once an error is recorded, later steps are skipped. Calling a successful container runs its effect or returns its model; calling a failed one prints the captured exception. The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> operator is overloaded as a compact alternative to <code class="docutils literal notranslate"><span class="pre">.bind(...)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PyomoMonad</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple monad class for handling Pyomo operations with error handling.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PyomoMonad</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""A simple monad class for handling Pyomo operations with error handling.</span>
 <span class="sd">    </span>
 <span class="sd">    This class is designed to simplify Pyomo operations by providing a way to</span>
 <span class="sd">    handle errors and chaining operations together. The bind method is used to</span>
 <span class="sd">    chain operations, and the __call__ method is used to execute the monad.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">effect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">effect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Initialize the PyomoMonad instance.</span>
 <span class="sd">        </span>
 <span class="sd">        :param value: The value to be processed by the monad</span>
@@ -945,19 +999,19 @@ GET OFF MY LAWN!
 <span class="sd">        :type effect: callable, optional</span>
 <span class="sd">        :param status: The current status of the monad, used for error handling</span>
 <span class="sd">        :type status: Any, optional</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">=</span> <span class="n">effect</span>
 
-    <span class="k">def</span> <span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Bind a function to the current monad instance.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bind</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Bind a function to the current monad instance.</span>
 <span class="sd">        </span>
 <span class="sd">        :param func: The function to be bound to the current monad</span>
 <span class="sd">        :type func: callable</span>
 <span class="sd">        :return: A new PyomoMonad instance</span>
 <span class="sd">        :rtype: PyomoMonad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">PyomoMonad</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
 
@@ -966,27 +1020,27 @@ GET OFF MY LAWN!
             <span class="k">return</span> <span class="n">PyomoMonad</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
 
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">PyomoMonad</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">value</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">),</span> <span class="n">status</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">PyomoMonad</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">value</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">status</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Execute the monad by calling its effect if it exists, or return its value.</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Execute the monad by calling its effect if it exists, or return its value.</span>
 <span class="sd">        </span>
-<span class="sd">        :return: The result of executing the monad&#39;s effect or its value</span>
+<span class="sd">        :return: The result of executing the monad's effect or its value</span>
 <span class="sd">        :rtype: Any</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 
-    <span class="k">def</span> <span class="fm">__rshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Implement the &#39;&gt;&gt;&#39; operator for chaining operations.</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__rshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Implement the '&gt;&gt;' operator for chaining operations.</span>
 <span class="sd">        </span>
 <span class="sd">        :param func: The function to be bound to the current monad</span>
 <span class="sd">        :type func: callable</span>
 <span class="sd">        :return: A new PyomoMonad instance</span>
 <span class="sd">        :rtype: PyomoMonad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -999,19 +1053,19 @@ GET OFF MY LAWN!
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">products</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;U&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">270</span><span class="p">,</span> <span class="s2">&quot;demand&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
-    <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">210</span><span class="p">,</span> <span class="s2">&quot;demand&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+    <span class="s2">"U"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"price"</span><span class="p">:</span> <span class="mi">270</span><span class="p">,</span> <span class="s2">"demand"</span><span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="s2">"V"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"price"</span><span class="p">:</span> <span class="mi">210</span><span class="p">,</span> <span class="s2">"demand"</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
 <span class="p">}</span>
 
 <span class="n">resources</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
-    <span class="s2">&quot;labor A&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
-    <span class="s2">&quot;labor B&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span><span class="p">:</span>  <span class="mi">80</span><span class="p">},</span>
+    <span class="s2">"M"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"price"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"available"</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+    <span class="s2">"labor A"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"price"</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"available"</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="s2">"labor B"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"price"</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s2">"available"</span><span class="p">:</span>  <span class="mi">80</span><span class="p">},</span>
 <span class="p">}</span>
 
 <span class="n">processes</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;U&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;labor A&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;labor B&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
-    <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;M&quot;</span><span class="p">:</span>  <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;labor A&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;labor B&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="s2">"U"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"M"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"labor A"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"labor B"</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="s2">"V"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"M"</span><span class="p">:</span>  <span class="mi">9</span><span class="p">,</span> <span class="s2">"labor A"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"labor B"</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1019,11 +1073,7 @@ GET OFF MY LAWN!
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyomo.environ</span> <span class="k">as</span> <span class="nn">pyo</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
-
-<span class="k">def</span> <span class="nf">production_model</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">resources</span><span class="p">,</span> <span class="n">processes</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">production_model</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">resources</span><span class="p">,</span> <span class="n">processes</span><span class="p">):</span>
 
     <span class="n">m</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">ConcreteModel</span><span class="p">()</span>
 
@@ -1031,25 +1081,25 @@ GET OFF MY LAWN!
     <span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="n">initialize</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">resources</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
 
     <span class="c1"># create decision variables</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span>  <span class="n">resources</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="s2">&quot;available&quot;</span><span class="p">]))</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">&quot;demand&quot;</span><span class="p">]))</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span>  <span class="n">resources</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="s2">"available"</span><span class="p">]))</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s2">"demand"</span><span class="p">]))</span>
 
     <span class="c1"># create expressions</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">revenue</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">)</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">resources</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">revenue</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Expression</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="s1">'price'</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">))</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Expression</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">resources</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="s1">'price'</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">))</span>
 
     <span class="c1"># create objective</span>
     <span class="nd">@m</span><span class="o">.</span><span class="n">Objective</span><span class="p">(</span><span class="n">sense</span><span class="o">=</span><span class="n">pyo</span><span class="o">.</span><span class="n">maximize</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">profit</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">profit</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">revenue</span> <span class="o">-</span> <span class="n">m</span><span class="o">.</span><span class="n">cost</span>
 
     <span class="c1"># create indexed constraint</span>
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">materials_used</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">materials_used</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">processes</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="n">r</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
 
     <span class="c1"># create a call back to return solution</span>
-    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">report</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="n">r</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">RESOURCES</span><span class="p">})</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="n">p</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">PRODUCTS</span><span class="p">})</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">profit</span><span class="p">(),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
@@ -1062,7 +1112,7 @@ GET OFF MY LAWN!
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">profit</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">production_model</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">resources</span><span class="p">,</span> <span class="n">processes</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">solver</span><span class="p">(</span><span class="s1">&#39;cbc&#39;</span><span class="p">))()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">profit</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">production_model</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">resources</span><span class="p">,</span> <span class="n">processes</span><span class="p">)</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">solver</span><span class="p">(</span><span class="s1">'cbc'</span><span class="p">))()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1119,21 +1169,21 @@ t_f &amp; = \arg \max_t\  b(t) \\
 &amp; \max\  b(1) \\
 \\
 \text{s.t.}\quad&amp; \frac{da}{dt'} = - t_f k_1 a &amp; a(0) = 1\\
-&amp; \frac{db}{dt'} = t_ff k_1 a - t_f k_2 b &amp; b(0) = 0 \\
+&amp; \frac{db}{dt'} = t_f k_1 a - t_f k_2 b &amp; b(0) = 0 \\
 &amp; t_f \geq 0
 \end{align*}
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(t_f\)</span> is now embedded as a parameter within the model, and the integration is now over a fixed interval <span class="math notranslate nohighlight">\(t' \in [0, 1]\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(t_f\)</span> is now embedded as a decision variable within the model, and the integration is now over a fixed interval <span class="math notranslate nohighlight">\(t' \in [0, 1]\)</span>.</p>
 </section>
 <section id="pyomo-model-builder">
 <h3>Pyomo model builder<a class="headerlink" href="#pyomo-model-builder" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyomo.environ</span> <span class="k">as</span> <span class="nn">pyo</span>
-<span class="kn">import</span> <span class="nn">pyomo.dae</span> <span class="k">as</span> <span class="nn">dae</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyomo.environ</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyo</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyomo.dae</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dae</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="k">def</span> <span class="nf">ode_model_builder</span><span class="p">(</span><span class="n">k1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">k2</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ode_model_builder</span><span class="p">(</span><span class="n">k1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">k2</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
 
     <span class="n">m</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">ConcreteModel</span><span class="p">()</span>
 
@@ -1147,29 +1197,29 @@ t_f &amp; = \arg \max_t\  b(t) \\
     <span class="n">m</span><span class="o">.</span><span class="n">dbdt</span> <span class="o">=</span> <span class="n">dae</span><span class="o">.</span><span class="n">DerivativeVar</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Objective</span><span class="p">(</span><span class="n">sense</span><span class="o">=</span><span class="n">pyo</span><span class="o">.</span><span class="n">maximize</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">max_b</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_b</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">odeA</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">odeA</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">dadt</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="n">k1</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">tf</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">odeB</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">odeB</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">dbdt</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">k1</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">tf</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">-</span> <span class="n">k2</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">tf</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
 
     <span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">report</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-            <span class="s1">&#39;t&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">tf</span><span class="p">()</span> <span class="o">*</span> <span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
-            <span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">t</span><span class="p">]()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
-            <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="n">t</span><span class="p">]()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
+            <span class="s1">'t'</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">tf</span><span class="p">()</span> <span class="o">*</span> <span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
+            <span class="s1">'A'</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">t</span><span class="p">]()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
+            <span class="s1">'B'</span> <span class="p">:</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="n">t</span><span class="p">]()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">t</span><span class="p">],</span>
         <span class="p">})</span>
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;concentration&quot;</span><span class="p">,</span>
-                     <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;k1 = </span><span class="si">{</span><span class="n">k1</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">, k2 = </span><span class="si">{</span><span class="n">k2</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tf</span><span class="p">(),</span> <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'t'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">"concentration"</span><span class="p">,</span>
+                     <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"k1 = </span><span class="si">{</span><span class="n">k1</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">, k2 = </span><span class="si">{</span><span class="n">k2</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tf</span><span class="p">(),</span> <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tf</span><span class="o">.</span><span class="n">value</span> <span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">PyomoMonad</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">effect</span><span class="o">=</span><span class="n">report</span><span class="p">)</span>
@@ -1183,10 +1233,10 @@ t_f &amp; = \arg \max_t\  b(t) \\
 <p>A typical use of <strong>PyomoMonad</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soln</span> <span class="o">=</span> <span class="n">ode_model_builder</span><span class="p">()</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">transformer</span><span class="p">(</span><span class="s1">&#39;dae.collocation&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">solver</span><span class="p">(</span><span class="s1">&#39;ipopt&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soln</span> <span class="o">=</span> <span class="n">ode_model_builder</span><span class="p">()</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">transformer</span><span class="p">(</span><span class="s1">'dae.collocation'</span><span class="p">))</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">solver</span><span class="p">(</span><span class="s1">'ipopt'</span><span class="p">))</span>
 <span class="n">tf</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">soln</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   tf = </span><span class="si">{</span><span class="n">tf</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;b(tf) = </span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"   tf = </span><span class="si">{</span><span class="n">tf</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"b(tf) = </span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1195,27 +1245,27 @@ t_f &amp; = \arg \max_t\  b(t) \\
 b(tf) = 0.669
 </pre></div>
 </div>
-<img alt="../../_images/e9319d18cc4fca0e7f64fc887b40a9dbc7e7ac5d0d51325c27f69589ee1ee329.png" src="../../_images/e9319d18cc4fca0e7f64fc887b40a9dbc7e7ac5d0d51325c27f69589ee1ee329.png" />
+<img alt="../../_images/7d989165352c13b6366e817bc9a6f13d508d62e4701d87b742962d48a9b35f10.png" src="../../_images/7d989165352c13b6366e817bc9a6f13d508d62e4701d87b742962d48a9b35f10.png" />
 </div>
 </div>
 </section>
-<section id="alterntive-syntax">
-<h3>Alterntive syntax<a class="headerlink" href="#alterntive-syntax" title="Link to this heading">#</a></h3>
+<section id="alternative-syntax">
+<h3>Alternative syntax<a class="headerlink" href="#alternative-syntax" title="Link to this heading">#</a></h3>
 <p>Show how the workflow functions can be composed into a single operation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collocation</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="s1">&#39;dae.collocation&#39;</span><span class="p">)</span>
-<span class="n">ipopt</span> <span class="o">=</span> <span class="n">solver</span><span class="p">(</span><span class="s1">&#39;ipopt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collocation</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="s1">'dae.collocation'</span><span class="p">)</span>
+<span class="n">ipopt</span> <span class="o">=</span> <span class="n">solver</span><span class="p">(</span><span class="s1">'ipopt'</span><span class="p">)</span>
 
 <span class="p">(</span><span class="n">soln</span> <span class="o">:=</span> <span class="n">ode_model_builder</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">collocation</span> <span class="o">&gt;&gt;</span> <span class="n">ipopt</span><span class="p">)()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.15767005981401438, 0.8541314382648219)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.15767005981401444, 0.8541314382648227)
 </pre></div>
 </div>
-<img alt="../../_images/66a2d46fef998227b0a4849e00748dda6eeb39ed3a5e6f77fe8fca0f62199d84.png" src="../../_images/66a2d46fef998227b0a4849e00748dda6eeb39ed3a5e6f77fe8fca0f62199d84.png" />
+<img alt="../../_images/827fe38238f879b6a4f65443a4c5046fc84942c367b329c9cdfe1b93de7fd5dc.png" src="../../_images/827fe38238f879b6a4f65443a4c5046fc84942c367b329c9cdfe1b93de7fd5dc.png" />
 </div>
 </div>
 </section>
@@ -1231,10 +1281,10 @@ b(tf) = 0.669
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.023594361612317, 0.6687402900841761)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.023594361612316, 0.6687402900841761)
 </pre></div>
 </div>
-<img alt="../../_images/e9319d18cc4fca0e7f64fc887b40a9dbc7e7ac5d0d51325c27f69589ee1ee329.png" src="../../_images/e9319d18cc4fca0e7f64fc887b40a9dbc7e7ac5d0d51325c27f69589ee1ee329.png" />
+<img alt="../../_images/7d989165352c13b6366e817bc9a6f13d508d62e4701d87b742962d48a9b35f10.png" src="../../_images/7d989165352c13b6366e817bc9a6f13d508d62e4701d87b742962d48a9b35f10.png" />
 </div>
 </div>
 </section>
@@ -1276,26 +1326,17 @@ b(tf) = 0.669
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="pyomo-style-guide.html"
+       href="pyomo-style-guide-update.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Pyomo style guide</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../../genindex.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Index</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1304,15 +1345,17 @@ b(tf) = 0.669
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomo-and-optimization-workflows">Pyomo and Optimization Workflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-programming-and-monads">Functional Programming and Monads</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-functions">Pure functions</a></li>
@@ -1325,7 +1368,7 @@ b(tf) = 0.669
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pyomo-monad">A Pyomo monad</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pyomo-and-solvers">Import Pyomo and solvers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-pyomo-solvers-and-transformations-as-pure-functions">Wrapping Pyomo solvers and transformations as “pure” functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-pyomo-solvers-and-transformations-as-functions">Wrapping Pyomo solvers and transformations as functions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomomonad"><strong>PyomoMonad</strong></a></li>
 </ul>
 </li>
@@ -1335,7 +1378,7 @@ b(tf) = 0.669
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-model">Mathematical model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyomo-model-builder">Pyomo model builder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-a-workflow">Executing a workflow</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alterntive-syntax">Alterntive syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-syntax">Alternative syntax</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">Composition</a></li>
 </ul>
 </li>
@@ -1388,8 +1431,8 @@ By The MO Book Group
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

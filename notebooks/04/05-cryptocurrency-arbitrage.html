@@ -14,49 +14,58 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-DVQ7NZ8CYZ"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-DVQ7NZ8CYZ');
             </script>
@@ -66,6 +75,12 @@
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-DVQ7NZ8CYZ');
             </script>
@@ -73,44 +88,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04/05-cryptocurrency-arbitrage';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Extra material: Energy dispatch problem" href="06-power-network.html" />
     <link rel="prev" title="4.4 Exam room scheduling" href="04-exam-room-scheduling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -118,7 +126,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -126,10 +133,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -138,7 +194,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -153,6 +210,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -165,22 +224,18 @@
       
     
     
-    <img src="../../_static/logo-02.png" class="logo__image only-light" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
-    <script>document.write(`<img src="../../_static/logo-02.png" class="logo__image only-dark" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>`);</script>
+    <img src="../../_static/cover.jpg" class="logo__image only-light" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
+    <img src="../../_static/cover.jpg" class="logo__image only-dark pst-js-only" alt="Companion code for the book "Hands-On Mathematical Optimization with Python" - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -192,13 +247,13 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../01/01.00.html">1. Mathematical Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01/01.00.html">1. Mathematical Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01/01-production-planning.html">1.1 A first production planning problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../01/02-production-planning-basic.html">1.2 A basic Pyomo model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../01/03-production-planning-advanced.html">1.3 A data-driven Pyomo Model</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02/02.00.html">2. Linear Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02/02.00.html">2. Linear Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../02/01-bim.html">2.1 BIM production planning using linear optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/02-lad-regression.html">2.2 Least Absolute Deviation (LAD) Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/03-mad-portfolio-optimization.html">2.3 Mean Absolute Deviation (MAD) portfolio optimization</a></li>
@@ -207,10 +262,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../02/06-bim-dual.html">2.6 Dual of the BIM production problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/07-bim-demand-forecast.html">2.7 BIM production using demand forecasts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02/08-L1-regression-wine-quality.html">Extra material: Wine quality prediction with <span class="math notranslate nohighlight">\(L_1\)</span> regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02/09-production-faciliity-worst-case.html">Extra material: Multi-product facility production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/09-production-facility-worst-case.html">Extra material: Multi-product facility production</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03/03.00.html">3. Mixed Integer Linear Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03/03.00.html">3. Mixed Integer Linear Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../03/01-bim-perturbed.html">3.1 BIM production with perturbed data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/02-shift-scheduling.html">3.2 Workforce shift scheduling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/03-recharging-electric-vehicle.html">3.3 Recharging strategy for an electric vehicle</a></li>
@@ -225,8 +280,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../03/10-job-shop-scheduling.html">Extra material: Job shop scheduling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03/11-maintenance-planning.html">Extra material: Maintenance planning</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="04.00.html">4. Network Optimization</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="04.00.html">4. Network Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-dinner-seat-allocation.html">4.1 Dinner seating arrangement</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="02-mincost-flow.html">4.2 Minimum-Cost Flow Problem</a></li>
@@ -243,17 +298,17 @@
 
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../05/05.00.html">5. Convex Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05/05.00.html">5. Convex Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../05/01-milk-pooling.html">5.1 Milk pooling and blending</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/02-ols-regression.html">5.2 Ordinary Least Squares (OLS) Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/03-markowitz-portfolio.html">5.3 Markowitz portfolio optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/04-svm-binary-classification.html">5.4 Support Vector Machines for binary classification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/05-refinery-production.html">Extra material: Refinery production and shadow pricing with CVXPY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05/06-cutting-stock.html">Extra Material: Cutting Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05/06-cutting-stock.html">Extra material: Cutting stock</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../06/06.00.html">6. Conic Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06/06.00.html">6. Conic Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../06/01-economic-order-quantity.html">6.1 Economic Order Quantity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/02-kelly-criterion.html">6.2 The Kelly criterion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/03-markowitz-portfolio-revisited.html">6.3 Markowitz portfolio optimization revisited</a></li>
@@ -262,25 +317,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../06/06-investment-wheel.html">Extra material: Luenberger’s Investment Wheel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../06/07-optimal-growth-portfolios.html">Extra material: Optimal Growth Portfolios with Risk Aversion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../07/07.00.html">7. Accounting for Uncertainty: Optimization Meets Reality</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07/07.00.html">7. Accounting for Uncertainty: Optimization Meets Reality</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../07/01-fleet-assignment.html">7.1 Fleet assignment problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../07/02-bim-robustness-analysis.html">7.2 Robustness analysis of BIM production plan via simulations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../08/08.00.html">8. Robust Optimization - Single Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08/08.00.html">8. Robust Optimization - Single Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../08/01-bim-robust-optimization.html">8.1 Robust BIM microchip production problem</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../09/09.00.html">9. Stochastic Optimization - Single Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09/09.00.html">9. Stochastic Optimization - Single Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../09/01-markowitz-portfolio-with-chance-constraint.html">9.1 Markowitz portfolio optimization with chance constraints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/02-pop-up-shop.html">9.2 Pop-up shop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/03-seafood-distribution-center.html">9.3 Stock optimization for seafood distribution center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../09/04-economic-dispatch.html">9.4 Economic dispatch in renewable energy systems using chance constraints</a></li>
-
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10/10.00.html">10. Two-Stage Problems</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10/10.00.html">10. Two-Stage Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../10/01-aircraft-seat-allocation.html">10.1 Aircraft seat allocation problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../10/02-two-stage-production-planning.html">10.2 Two-stage production planning using constraint and column generation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../10/03-opf-linear-decision-rule.html">10.3 Optimal power flow problem with recourse actions</a></li>
@@ -288,13 +342,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../10/05-opf-wind-curtailment.html">Extra: Two-stage energy dispatch optimization with wind curtailment</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix: Working with Pyomo</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/pyomo-style-guide.html">Pyomo style guide</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix: Working with Pyomo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/pyomo-style-guide-update.html">Pyomo style guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/functional-programming-pyomo.html">Functional Programming with Pyomo</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+</details></li>
 </ul>
 
     </div>
@@ -303,14 +356,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -319,14 +377,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -351,14 +409,14 @@
       
       <li><a href="https://colab.research.google.com/github/mobook/MO-book/blob/main/notebooks/04/05-cryptocurrency-arbitrage.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -466,7 +524,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -480,27 +538,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -520,7 +570,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installations-and-imports">Installations and Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-install-pyomo-and-a-solver">Preamble: Install Pyomo and a solver</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-description">Problem description</a><ul class="nav section-nav flex-column">
@@ -559,18 +609,18 @@ document.write(`
 <p>The following cell sets and verifies a global SOLVER for the notebook. If run on Google Colab, the cell installs Pyomo and the HiGHS solver, while, if run elsewhere, it assumes Pyomo and HiGHS have been previously installed. It then sets to use HiGHS as solver via the appsi module and a test is performed to verify that it is available. The solver interface is stored in a global object <code class="docutils literal notranslate"><span class="pre">SOLVER</span></code> for later use.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
  
-<span class="k">if</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+<span class="k">if</span> <span class="s1">'google.colab'</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
     <span class="o">%</span><span class="k">pip</span> install pyomo &gt;/dev/null 2&gt;/dev/null
     <span class="o">%</span><span class="k">pip</span> install highspy &gt;/dev/null 2&gt;/dev/null
  
-<span class="n">solver</span> <span class="o">=</span> <span class="s1">&#39;appsi_highs&#39;</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="s1">'appsi_highs'</span>
  
-<span class="kn">import</span> <span class="nn">pyomo.environ</span> <span class="k">as</span> <span class="nn">pyo</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyomo.environ</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyo</span>
 <span class="n">SOLVER</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">SolverFactory</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
 
-<span class="k">assert</span> <span class="n">SOLVER</span><span class="o">.</span><span class="n">available</span><span class="p">(),</span> <span class="sa">f</span><span class="s2">&quot;Solver </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> is not available.&quot;</span>
+<span class="k">assert</span> <span class="n">SOLVER</span><span class="o">.</span><span class="n">available</span><span class="p">(),</span> <span class="sa">f</span><span class="s2">"Solver </span><span class="si">{</span><span class="n">solver</span><span class="si">}</span><span class="s2"> is not available."</span>
 </pre></div>
 </div>
 </div>
@@ -598,12 +648,12 @@ document.write(`
 <p>We import all the libraries we need for this notebook in the following cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="kn">import</span> <span class="nn">ccxt</span>
-<span class="kn">import</span> <span class="nn">glob</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ccxt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
 </pre></div>
 </div>
 </div>
@@ -614,9 +664,9 @@ document.write(`
 <p>Here we use the <code class="docutils literal notranslate"><span class="pre">ccxt</span></code> library and list current exchanges supported by <code class="docutils literal notranslate"><span class="pre">ccxt</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Available exchanges:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Available exchanges:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">exchange</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ccxt</span><span class="o">.</span><span class="n">exchanges</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">exchange</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="k">else</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">exchange</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="k">else</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -666,14 +716,14 @@ document.write(`
 <span class="n">exchange</span> <span class="o">=</span> <span class="n">ccxt</span><span class="o">.</span><span class="n">binanceus</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">get_exchange_dg</span><span class="p">(</span><span class="n">exchange</span><span class="p">,</span> <span class="n">minimum_in_degree</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_exchange_dg</span><span class="p">(</span><span class="n">exchange</span><span class="p">,</span> <span class="n">minimum_in_degree</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">markets</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="n">load_markets</span><span class="p">()</span>
     <span class="n">symbols</span> <span class="o">=</span> <span class="n">markets</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 
     <span class="c1"># create an edge for all market symbols</span>
     <span class="n">dg</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">base</span><span class="p">,</span> <span class="n">quote</span> <span class="ow">in</span> <span class="p">[</span><span class="n">symbol</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">]:</span>
-        <span class="n">dg</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">quote</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">base</span><span class="p">,</span> <span class="n">quote</span> <span class="ow">in</span> <span class="p">[</span><span class="n">symbol</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)</span> <span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">]:</span>
+        <span class="n">dg</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">quote</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># remove base currencies with in_degree less than minimum_in_degree</span>
     <span class="n">remove_nodes</span> <span class="o">=</span> <span class="p">[</span>
@@ -689,12 +739,12 @@ document.write(`
 
     <span class="c1"># color quote currencies in gold</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
-        <span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;gold&quot;</span> <span class="k">if</span> <span class="n">dg</span><span class="o">.</span><span class="n">out_degree</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;lightblue&quot;</span>
+        <span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"gold"</span> <span class="k">if</span> <span class="n">dg</span><span class="o">.</span><span class="n">out_degree</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">"lightblue"</span>
 
     <span class="k">return</span> <span class="n">dg</span>
 
 
-<span class="k">def</span> <span class="nf">draw_dg</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">rad</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_dg</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="n">rad</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
     <span class="n">n_nodes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>
     <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_nodes</span><span class="p">))</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
@@ -703,18 +753,18 @@ document.write(`
         <span class="n">dg</span><span class="p">,</span>
         <span class="n">pos</span><span class="p">,</span>
         <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">node_color</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()],</span>
-        <span class="n">edge_color</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
-        <span class="n">width</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">][</span><span class="s2">&quot;width&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+        <span class="n">node_color</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()],</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+        <span class="n">width</span><span class="o">=</span><span class="p">[</span><span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">][</span><span class="s2">"width"</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
         <span class="n">node_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
         <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
         <span class="n">arrowsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
-        <span class="n">connectionstyle</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;arc3, rad=</span><span class="si">{</span><span class="n">rad</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">connectionstyle</span><span class="o">=</span><span class="sa">f</span><span class="s2">"arc3, rad=</span><span class="si">{</span><span class="n">rad</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span>
-        <span class="n">dg</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">src</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">dst</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">()}</span>
+        <span class="n">dg</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">src</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">dst</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">dg</span><span class="o">.</span><span class="n">edges</span><span class="p">()}</span>
     <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 
@@ -724,10 +774,10 @@ document.write(`
 <span class="n">ax</span> <span class="o">=</span> <span class="n">draw_dg</span><span class="p">(</span><span class="n">exchange_dg</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span>
     <span class="n">exchange</span><span class="o">.</span><span class="n">name</span>
-    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; - Network obtained filtering for minimum indegree (Base Currencies) = </span><span class="si">{</span><span class="n">minimum_in_degree</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="o">+</span> <span class="sa">f</span><span class="s2">" - Network obtained filtering for minimum indegree (Base Currencies) = </span><span class="si">{</span><span class="n">minimum_in_degree</span><span class="si">}</span><span class="s2">"</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of nodes = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">exchange_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of edges = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">exchange_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">())</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Number of nodes = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">exchange_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Number of edges = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">exchange_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">())</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -750,15 +800,15 @@ Number of edges = 449
 <p>The following cell reads and displays a previously saved order book. Cells at the end of this notebook demonstrate how to retrieve an order book from an exchange and save it as a Pandas DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;Binance_US_orderbook_saved.csv&quot;</span>
-<span class="k">if</span> <span class="s2">&quot;google.colab&quot;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">"Binance_US_orderbook_saved.csv"</span>
+<span class="k">if</span> <span class="s2">"google.colab"</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
     <span class="n">order_book</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
-        <span class="s2">&quot;https://raw.githubusercontent.com/mobook/MO-book/main/notebooks/04/data/&quot;</span>
+        <span class="s2">"https://raw.githubusercontent.com/mobook/MO-book/main/notebooks/04/data/"</span>
         <span class="o">+</span> <span class="n">filename</span><span class="p">,</span>
         <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">order_book</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/&quot;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">order_book</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/"</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
 </pre></div>
@@ -1331,48 +1381,48 @@ c_{q\rightarrow b} &amp; = \text{ask volume} \times \text{ask volume}
 <p>The following cell creates a directed graph using data from an exchange order book. To distinguish between different order types, we will highlight the big orders with green color, and ask orders with red color.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">):</span>
     <span class="c1"># create a dictionary of edges index by (src, dst)</span>
     <span class="n">dg_order_book</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
 
     <span class="c1"># loop over each order in the order book dataframe</span>
     <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">order_book</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-        <span class="c1"># if the order is a &#39;bid&#39;, i.e., an order to purchase the base currency</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;bid_volume&quot;</span><span class="p">]):</span>
-            <span class="n">src</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">]</span>
-            <span class="n">dst</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;quote&quot;</span><span class="p">]</span>
+        <span class="c1"># if the order is a 'bid', i.e., an order to purchase the base currency</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"bid_volume"</span><span class="p">]):</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"base"</span><span class="p">]</span>
+            <span class="n">dst</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"quote"</span><span class="p">]</span>
             <span class="c1"># add an edge to the graph with the relevant attributes</span>
             <span class="n">dg_order_book</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span>
                 <span class="n">src</span><span class="p">,</span>
                 <span class="n">dst</span><span class="p">,</span>
-                <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bid&quot;</span><span class="p">,</span>
-                <span class="n">a</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;bid_price&quot;</span><span class="p">],</span>
-                <span class="n">capacity</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;bid_volume&quot;</span><span class="p">],</span>
-                <span class="n">weight</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;bid_price&quot;</span><span class="p">]),</span>
-                <span class="n">color</span><span class="o">=</span><span class="s2">&quot;g&quot;</span><span class="p">,</span>
+                <span class="n">kind</span><span class="o">=</span><span class="s2">"bid"</span><span class="p">,</span>
+                <span class="n">a</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"bid_price"</span><span class="p">],</span>
+                <span class="n">capacity</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"bid_volume"</span><span class="p">],</span>
+                <span class="n">weight</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"bid_price"</span><span class="p">]),</span>
+                <span class="n">color</span><span class="o">=</span><span class="s2">"g"</span><span class="p">,</span>
                 <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
             <span class="p">)</span>
 
-        <span class="c1"># if the order is an &#39;ask&#39;, i.e., an order to sell the base currency</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;ask_volume&quot;</span><span class="p">]):</span>
-            <span class="n">src</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;quote&quot;</span><span class="p">]</span>
-            <span class="n">dst</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">]</span>
+        <span class="c1"># if the order is an 'ask', i.e., an order to sell the base currency</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"ask_volume"</span><span class="p">]):</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"quote"</span><span class="p">]</span>
+            <span class="n">dst</span> <span class="o">=</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"base"</span><span class="p">]</span>
             <span class="c1"># add an edge to the graph with the relevant attributes</span>
             <span class="n">dg_order_book</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span>
                 <span class="n">src</span><span class="p">,</span>
                 <span class="n">dst</span><span class="p">,</span>
-                <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;ask&quot;</span><span class="p">,</span>
-                <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;ask_price&quot;</span><span class="p">],</span>
-                <span class="n">capacity</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;ask_volume&quot;</span><span class="p">]</span>
-                <span class="o">*</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;ask_price&quot;</span><span class="p">],</span>
-                <span class="n">weight</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">&quot;ask_price&quot;</span><span class="p">]),</span>
-                <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+                <span class="n">kind</span><span class="o">=</span><span class="s2">"ask"</span><span class="p">,</span>
+                <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"ask_price"</span><span class="p">],</span>
+                <span class="n">capacity</span><span class="o">=</span><span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"ask_volume"</span><span class="p">]</span>
+                <span class="o">*</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"ask_price"</span><span class="p">],</span>
+                <span class="n">weight</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">order</span><span class="p">,</span> <span class="s2">"ask_price"</span><span class="p">]),</span>
+                <span class="n">color</span><span class="o">=</span><span class="s2">"r"</span><span class="p">,</span>
                 <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
             <span class="p">)</span>
 
-    <span class="c1"># loop over each node in the graph and set the color attribute to &quot;lightblue&quot;</span>
+    <span class="c1"># loop over each node in the graph and set the color attribute to "lightblue"</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">dg_order_book</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
-        <span class="n">dg_order_book</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span>
+        <span class="n">dg_order_book</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"lightblue"</span>
 
     <span class="k">return</span> <span class="n">dg_order_book</span>
 
@@ -1386,12 +1436,12 @@ c_{q\rightarrow b} &amp; = \text{ask volume} \times \text{ask volume}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display contents of the directed graph</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;src   --&gt; dst    kind            a                c&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;------------------------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"src   --&gt; dst    kind            a                c"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"------------------------------------------------------"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2"> --&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2">   </span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">&#39;kind&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">&#39;a&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2"> 16f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">&#39;capacity&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2"> 16f</span><span class="si">}</span><span class="s2">    &quot;</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2"> --&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2">   </span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">'kind'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+        <span class="o">+</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">'a'</span><span class="p">]</span><span class="si">:</span><span class="s2"> 16f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">)][</span><span class="s1">'capacity'</span><span class="p">]</span><span class="si">:</span><span class="s2"> 16f</span><span class="si">}</span><span class="s2">    "</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -1538,7 +1588,7 @@ USD   --&gt; TRX     ask       14.409222     15562.637700
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">order_book_dg</span> <span class="o">=</span> <span class="n">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">negative_edge_cycle</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">heuristic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">negative_edge_cycle</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s2">"weight"</span><span class="p">,</span> <span class="n">heuristic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1552,24 +1602,24 @@ USD   --&gt; TRX     ask       14.409222     15562.637700
 <p>Luckily, the <code class="docutils literal notranslate"><span class="pre">networkx</span></code> library includes the function <a class="reference external" href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.find_negative_cycle.html"><code class="docutils literal notranslate"><span class="pre">find_negative_cycle</span></code></a> that locates a single negative edge cycle if one exists. We can use this to demonstrate the existence of an arbitrage opportunity and to highlight that opportunity on the directed graph of all possible trades. The following cell reports the cycle found and the corresponding trading return measured in basis points (1 basis point = 0.01%). The same trading cycle is marked with thicker arcs in the graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_weights</span><span class="p">(</span><span class="n">cycle</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sum_weights</span><span class="p">(</span><span class="n">cycle</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span>
+            <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">"weight"</span><span class="p">]</span>
             <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span> <span class="n">cycle</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">cycle</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
         <span class="p">]</span>
     <span class="p">)</span>
 
 
 <span class="n">order_book_dg</span> <span class="o">=</span> <span class="n">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
-<span class="n">arb</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">find_negative_cycle</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;USD&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">arb</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">find_negative_cycle</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s2">"weight"</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"USD"</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">bp</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sum_weights</span><span class="p">(</span><span class="n">arb</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">arb</span><span class="p">,</span> <span class="n">arb</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">arb</span><span class="p">[:</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">order_book_dg</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="n">dst</span><span class="p">][</span><span class="s2">&quot;width&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">order_book_dg</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="n">dst</span><span class="p">][</span><span class="s2">"width"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="nb">print</span><span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;Trading cycle with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">arb</span><span class="p">))</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">&#39; --&gt; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">arb</span><span class="p">))</span><span class="si">}</span><span class="se">\n</span><span class="s2">Return = </span><span class="si">{</span><span class="n">bp</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2"> basis points &quot;</span>
+    <span class="sa">f</span><span class="s2">"Trading cycle with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">arb</span><span class="p">))</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">' --&gt; '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">arb</span><span class="p">))</span><span class="si">}</span><span class="se">\n</span><span class="s2">Return = </span><span class="si">{</span><span class="n">bp</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2"> basis points "</span>
 <span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">draw_dg</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1600,10 +1650,10 @@ Return =  5.002 basis points
 
 
 <span class="c1"># compute the sum of weights given a list of nodes</span>
-<span class="k">def</span> <span class="nf">sum_weights</span><span class="p">(</span><span class="n">cycle</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_weights</span><span class="p">(</span><span class="n">cycle</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span>
+            <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">"weight"</span><span class="p">]</span>
             <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span> <span class="n">cycle</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">cycle</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
         <span class="p">]</span>
     <span class="p">)</span>
@@ -1616,17 +1666,17 @@ Return =  5.002 basis points
 <span class="p">}</span>
 
 <span class="nb">print</span><span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cycles</span><span class="p">)</span><span class="si">}</span><span class="s2"> distinct simple cycles in the order book, </span><span class="si">{</span><span class="nb">len</span><span class="p">([</span><span class="n">cycle</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">cycle</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cycles</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2"> of which have positive return.&quot;</span>
+    <span class="sa">f</span><span class="s2">"There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cycles</span><span class="p">)</span><span class="si">}</span><span class="s2"> distinct simple cycles in the order book, </span><span class="si">{</span><span class="nb">len</span><span class="p">([</span><span class="n">cycle</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">cycle</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cycles</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2"> of which have positive return."</span>
 <span class="p">)</span>
 
 <span class="c1"># create histogram</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">cycles</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cycles</span><span class="p">))))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Basis Points&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Histogram of Returns for all Simple Cycles&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"count"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Basis Points"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Histogram of Returns for all Simple Cycles"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"r"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1647,12 +1697,12 @@ Return =  5.002 basis points
 
 <span class="n">n_cycles_to_list</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Top </span><span class="si">{</span><span class="n">n_cycles_to_list</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Basis Points             Arbitrage Cycle&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Top </span><span class="si">{</span><span class="n">n_cycles_to_list</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Basis Points             Arbitrage Cycle"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="n">arbitrage</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_cycles_to_list</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arbitrage</span><span class="p">))]:</span>
     <span class="n">t</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cycle</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cycle</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">         </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">&#39; --&gt; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">         </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">' --&gt; '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1676,18 +1726,18 @@ Basis Points             Arbitrage Cycle
 
 <span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="n">arbitrage</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_cycles_to_show</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arbitrage</span><span class="p">))]:</span>
     <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;Trading cycle with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">&#39; --&gt; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">Return = </span><span class="si">{</span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2"> basis points &quot;</span>
+        <span class="sa">f</span><span class="s2">"Trading cycle with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2"> trades: </span><span class="si">{</span><span class="s1">' --&gt; '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">Return = </span><span class="si">{</span><span class="n">cycles</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2"> basis points "</span>
     <span class="p">)</span>
     <span class="c1"># get fresh graph to color nodes</span>
     <span class="n">order_book_dg</span> <span class="o">=</span> <span class="n">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
 
     <span class="c1"># color nodes red</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">cycle</span><span class="p">:</span>
-        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"red"</span>
 
     <span class="c1"># makes lines wide</span>
     <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span> <span class="n">cycle</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">cycle</span><span class="p">[:</span><span class="mi">1</span><span class="p">]):</span>
-        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">&quot;width&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="n">edge</span><span class="p">][</span><span class="s2">"width"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
 
     <span class="n">ax</span> <span class="o">=</span> <span class="n">draw_dg</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">rad</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
@@ -1744,8 +1794,8 @@ Return = 14.774 basis points
 <p>The following cell implements this optimization model using Pyomo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crypto_model</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">v0</span><span class="o">=</span><span class="mf">100.0</span><span class="p">):</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">ConcreteModel</span><span class="p">(</span><span class="s2">&quot;Cryptocurrency arbitrage&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">crypto_model</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">v0</span><span class="o">=</span><span class="mf">100.0</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">ConcreteModel</span><span class="p">(</span><span class="s2">"Cryptocurrency arbitrage"</span><span class="p">)</span>
 
     <span class="c1"># length of the trading chain</span>
     <span class="n">m</span><span class="o">.</span><span class="n">T0</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">RangeSet</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
@@ -1764,41 +1814,41 @@ Return = 14.774 basis points
     <span class="c1"># total amount traded on each edge over all trades</span>
     <span class="n">m</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">pyo</span><span class="o">.</span><span class="n">NonNegativeReals</span><span class="p">)</span>
 
-    <span class="c1"># &quot;multiplier&quot; on each trading edge</span>
+    <span class="c1"># "multiplier" on each trading edge</span>
     <span class="nd">@m</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">a</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">"a"</span><span class="p">]</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">&quot;capacity&quot;</span><span class="p">]</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">"capacity"</span><span class="p">]</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Objective</span><span class="p">(</span><span class="n">sense</span><span class="o">=</span><span class="n">pyo</span><span class="o">.</span><span class="n">maximize</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">wealth</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">]</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">wealth</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="s2">"USD"</span><span class="p">,</span> <span class="n">T</span><span class="p">]</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">total_traded</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">total_traded</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]</span> <span class="o">==</span> <span class="nb">sum</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">T1</span><span class="p">])</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">edge_capacity</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edge_capacity</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]</span>
 
     <span class="c1"># initial assignment of v0 units on a selected currency</span>
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">NODES</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">initial</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s2">&quot;USD&quot;</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initial</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s2">"USD"</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">v0</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">NODES</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">T1</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">no_shorting</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">no_shorting</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
         <span class="n">out_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">dst</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span> <span class="k">if</span> <span class="n">src</span> <span class="o">==</span> <span class="n">node</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="k">for</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">out_nodes</span><span class="p">)</span>
 
     <span class="nd">@m</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">NODES</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">T1</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">balances</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">balances</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
         <span class="n">in_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">src</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span> <span class="k">if</span> <span class="n">dst</span> <span class="o">==</span> <span class="n">node</span><span class="p">]</span>
         <span class="n">out_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">dst</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span> <span class="k">if</span> <span class="n">src</span> <span class="o">==</span> <span class="n">node</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span>
@@ -1820,9 +1870,9 @@ Return = 14.774 basis points
 <span class="n">SOLVER</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 <span class="n">vT</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">wealth</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting wealth = </span><span class="si">{</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> USD&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Weath after </span><span class="si">{</span><span class="n">T</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> transactions = </span><span class="si">{</span><span class="n">vT</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> USD&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Return = </span><span class="si">{</span><span class="mi">10000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">vT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v0</span><span class="p">)</span><span class="o">/</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> basis points&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Starting wealth = </span><span class="si">{</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> USD"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Weath after </span><span class="si">{</span><span class="n">T</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> transactions = </span><span class="si">{</span><span class="n">vT</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> USD"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Return = </span><span class="si">{</span><span class="mi">10000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">vT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v0</span><span class="p">)</span><span class="o">/</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> basis points"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1838,9 +1888,9 @@ Return = 9.006 basis points
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">NODES</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">node</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">node</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">T0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">11.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">11.5f</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1866,13 +1916,13 @@ USD   10000.00000    -0.00000     0.00000     0.00000     0.00000    -0.00000   
 <p>To be even more specific, the following cell lists the sequence of transcations executed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transaction Events&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Transaction Events"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">T1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;t = </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"t = </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">t</span><span class="p">]()</span> <span class="o">&gt;</span> <span class="mf">1e-6</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.6f</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">" </span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.6f</span><span class="si">}</span><span class="s2">"</span>
             <span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
@@ -1928,9 +1978,9 @@ t = 8
 <span class="c1"># report what orders to issue</span>
 <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]()</span> <span class="o">&gt;</span> <span class="mf">0.0000002</span><span class="p">:</span>
-        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
-        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">dst</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
-        <span class="n">order_book_dg</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="n">dst</span><span class="p">][</span><span class="s2">&quot;width&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"red"</span>
+        <span class="n">order_book_dg</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">dst</span><span class="p">][</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"red"</span>
+        <span class="n">order_book_dg</span><span class="p">[</span><span class="n">src</span><span class="p">][</span><span class="n">dst</span><span class="p">][</span><span class="s2">"width"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="n">draw_dg</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1945,28 +1995,28 @@ t = 8
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># report what orders to issue</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trading Summary for the Order Book&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Order Book   Type    Capacity         Traded&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Trading Summary for the Order Book"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Order Book   Type    Capacity         Traded"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">EDGES</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]()</span> <span class="o">&gt;</span> <span class="mf">0.0000002</span><span class="p">:</span>
-        <span class="n">kind</span> <span class="o">=</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">&quot;kind&quot;</span><span class="p">]</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">&gt;5s</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">&lt;5s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]</span><span class="si">:</span><span class="s2">12.5f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.5f</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;  &gt;&gt;&gt;  &quot;</span>
-        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;ask&quot;</span><span class="p">:</span>
+        <span class="n">kind</span> <span class="o">=</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">"kind"</span><span class="p">]</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">src</span><span class="si">:</span><span class="s2">&gt;5s</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">dst</span><span class="si">:</span><span class="s2">&lt;5s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]</span><span class="si">:</span><span class="s2">12.5f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">]()</span><span class="si">:</span><span class="s2">14.5f</span><span class="si">}</span><span class="s2">"</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">"  &gt;&gt;&gt;  "</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">"ask"</span><span class="p">:</span>
             <span class="n">base</span> <span class="o">=</span> <span class="n">dst</span>
             <span class="n">quote</span> <span class="o">=</span> <span class="n">src</span>
-            <span class="n">symbol</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">quote</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+            <span class="n">symbol</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">quote</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">"a"</span><span class="p">]</span>
             <span class="n">volume</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]()</span> <span class="o">/</span> <span class="n">price</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;sell </span><span class="si">{</span><span class="n">volume</span><span class="si">:</span><span class="s2">15.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">symbol</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"sell </span><span class="si">{</span><span class="n">volume</span><span class="si">:</span><span class="s2">15.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">symbol</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2">"</span>
 
-        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;bid&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">"bid"</span><span class="p">:</span>
             <span class="n">base</span> <span class="o">=</span> <span class="n">src</span>
             <span class="n">quote</span> <span class="o">=</span> <span class="n">dst</span>
-            <span class="n">symbol</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">quote</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+            <span class="n">symbol</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">quote</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="n">order_book_dg</span><span class="o">.</span><span class="n">edges</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)][</span><span class="s2">"a"</span><span class="p">]</span>
             <span class="n">volume</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">]()</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;buy </span><span class="si">{</span><span class="n">volume</span><span class="si">:</span><span class="s2">16.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">symbol</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"buy </span><span class="si">{</span><span class="n">volume</span><span class="si">:</span><span class="s2">16.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">symbol</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2">"</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2001,11 +2051,11 @@ t = 8
             <span class="n">balances</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">node</span><span class="p">,</span> <span class="n">t</span><span class="p">]()</span>
 
 <span class="n">balances</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">,</span>
     <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Transaction&quot;</span><span class="p">,</span>
-    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Currency Units&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">"Transaction"</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">"Currency Units"</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -2030,16 +2080,16 @@ t = 8
 <p>The subsequent cell in the notebook utilizes <code class="docutils literal notranslate"><span class="pre">ccxt.exchange.fetch_order_book</span></code> to obtain the highest bid and lowest ask orders from an exchange for market symbols that meet the criteria of having a minimum in-degree for their base currencies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_order_book</span><span class="p">(</span><span class="n">exchange</span><span class="p">,</span> <span class="n">exchange_dg</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get_orders</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">quote</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="n">fetch_order_book</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">base</span><span class="p">,</span> <span class="n">quote</span><span class="p">]),</span> <span class="n">limit</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;asks&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;bids&quot;</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_order_book</span><span class="p">(</span><span class="n">exchange</span><span class="p">,</span> <span class="n">exchange_dg</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_orders</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">quote</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="n">fetch_order_book</span><span class="p">(</span><span class="s2">"/"</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">base</span><span class="p">,</span> <span class="n">quote</span><span class="p">]),</span> <span class="n">limit</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">[</span><span class="s2">"asks"</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">result</span><span class="p">[</span><span class="s2">"bids"</span><span class="p">]:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;quote&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base</span><span class="p">,</span> <span class="n">quote</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">()</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;bid_price&quot;</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;bid_volume&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;bids&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;ask_price&quot;</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;ask_volume&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;asks&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">"base"</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">"quote"</span><span class="p">]</span> <span class="o">=</span> <span class="n">base</span><span class="p">,</span> <span class="n">quote</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">"timestamp"</span><span class="p">]</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">()</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">"bid_price"</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">"bid_volume"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"bids"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">"ask_price"</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">"ask_volume"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"asks"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
 
     <span class="c1"># fetch order book data and store in a dictionary</span>
@@ -2050,18 +2100,18 @@ t = 8
 
     <span class="c1"># convert to pandas dataframe</span>
     <span class="n">order_book</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
-    <span class="n">order_book</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">order_book</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;ms&quot;</span><span class="p">)</span>
+    <span class="n">order_book</span><span class="p">[</span><span class="s2">"timestamp"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">order_book</span><span class="p">[</span><span class="s2">"timestamp"</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">"ms"</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">order_book</span><span class="p">[</span>
         <span class="p">[</span>
-            <span class="s2">&quot;symbol&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;base&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;quote&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;bid_price&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;bid_volume&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;ask_price&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;ask_volume&quot;</span><span class="p">,</span>
+            <span class="s2">"symbol"</span><span class="p">,</span>
+            <span class="s2">"timestamp"</span><span class="p">,</span>
+            <span class="s2">"base"</span><span class="p">,</span>
+            <span class="s2">"quote"</span><span class="p">,</span>
+            <span class="s2">"bid_price"</span><span class="p">,</span>
+            <span class="s2">"bid_volume"</span><span class="p">,</span>
+            <span class="s2">"ask_price"</span><span class="p">,</span>
+            <span class="s2">"ask_volume"</span><span class="p">,</span>
         <span class="p">]</span>
     <span class="p">]</span>
 
@@ -2080,7 +2130,7 @@ t = 8
 <span class="n">m</span> <span class="o">=</span> <span class="n">crypto_model</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">v0</span><span class="o">=</span><span class="n">v0</span><span class="p">)</span>
 <span class="n">vT</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">wealth</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Potential Return = </span><span class="si">{</span><span class="mi">10000</span><span class="o">*</span><span class="p">(</span><span class="n">vT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v0</span><span class="p">)</span><span class="o">/</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> basis points&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Potential Return = </span><span class="si">{</span><span class="mi">10000</span><span class="o">*</span><span class="p">(</span><span class="n">vT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v0</span><span class="p">)</span><span class="o">/</span><span class="n">v0</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> basis points"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2247,8 +2297,8 @@ t = 8
 <p>The following cell can be used to download additional order book data sets for testing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># get graph of market symbols with mininum_in_degree for base currencies</span>
 <span class="n">minimum_in_degree</span> <span class="o">=</span> <span class="mi">5</span>
@@ -2262,9 +2312,9 @@ t = 8
 <span class="n">arb_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
 
 <span class="c1"># wait for arbitrage opportunity</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Search for </span><span class="si">{</span><span class="n">search_time</span><span class="si">}</span><span class="s2"> seconds.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Search for </span><span class="si">{</span><span class="n">search_time</span><span class="si">}</span><span class="s2"> seconds."</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">timeout</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Basis points = &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Basis points = "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
     <span class="n">order_book</span> <span class="o">=</span> <span class="n">get_order_book</span><span class="p">(</span><span class="n">exchange</span><span class="p">,</span> <span class="n">exchange_dg</span><span class="p">)</span>
     <span class="n">order_book_dg</span> <span class="o">=</span> <span class="n">order_book_to_dg</span><span class="p">(</span><span class="n">order_book</span><span class="p">)</span>
 
@@ -2272,17 +2322,17 @@ t = 8
     <span class="n">m</span> <span class="o">=</span> <span class="n">crypto_model</span><span class="p">(</span><span class="n">order_book_dg</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">v0</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
     <span class="n">vT</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">wealth</span><span class="p">()</span>
     <span class="n">bp</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="n">vT</span> <span class="o">-</span> <span class="n">v0</span><span class="p">)</span> <span class="o">/</span> <span class="n">vT</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bp</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">bp</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">bp</span> <span class="o">&gt;=</span> <span class="n">arb_threshold</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;arbitrage found!&quot;</span><span class="p">)</span>
-        <span class="n">fname</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exchange</span><span class="si">}</span><span class="s2"> orderbook </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
-            <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"arbitrage found!"</span><span class="p">)</span>
+        <span class="n">fname</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">exchange</span><span class="si">}</span><span class="s2"> orderbook </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y%m</span><span class="si">%d</span><span class="s1">_%H%M%S'</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv"</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+            <span class="s2">" "</span><span class="p">,</span> <span class="s2">"_"</span>
         <span class="p">)</span>
         <span class="n">order_book</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;order book saved to: </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"order book saved to: </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Search complete.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Search complete."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2363,7 +2413,7 @@ Search complete.
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -2391,15 +2441,17 @@ Search complete.
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installations-and-imports">Installations and Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble-install-pyomo-and-a-solver">Preamble: Install Pyomo and a solver</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-description">Problem description</a><ul class="nav section-nav flex-column">
@@ -2465,8 +2517,8 @@ By The MO Book Group
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>
